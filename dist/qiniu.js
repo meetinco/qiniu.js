@@ -1640,7 +1640,7 @@
            var putToken = config.putToken;
 
            // upload API
-           var uploadUrl = 'http://' + globalConfig.uploadUrl;
+           var uploadUrl = 'https://' + globalConfig.uploadUrl;
 
            // isIE
            var isIE = window.ActiveXObject ? true : false;
@@ -1702,7 +1702,7 @@
            options.blockSize = options.blockSize || file.MB.form(5);
 
            // upload API
-           var uploadUrl = 'http://' + globalConfig.uploadUrl + '/mkblk/' + options.blockSize;
+           var uploadUrl = 'https://' + globalConfig.uploadUrl + '/mkblk/' + options.blockSize;
 
            // ctx
            var blockCtxes = [];
@@ -1791,7 +1791,7 @@
            if (_this3.config.url) {
              url = utils.format('%s/%s?e=3600&token=%s', _this3.url(), key, getToken);
            } else {
-             url = utils.format('http://%s.qiniudn.com/%s?e=3600&token=%s', _this3.name, key, getToken);
+             url = utils.format('https://%s.qiniudn.com/%s?e=3600&token=%s', _this3.name, key, getToken);
            }
 
            ajax.get(url, function (err, body) {
